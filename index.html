@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8"/>
-    <title>JS Studying/ Metanit</title>
+    <meta charset="utf-8" />
 
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+            text-align: left;
+        }
+        .loading-container {
+            position: fixed;
+            top: 20px; /* Расстояние от верхней границы экрана */
+            left: 50%;
+            transform: translateX(-50%); /* Центрируем по горизонтали */
+            z-index: 9999; /* чтобы индикатор был поверх других элементов */
+        }
+
+        .loading-image {
+            width: 50px; /* Размер картинки, можешь подставить свой */
+            height: 50px; /* Размер картинки */
+            animation: rotate 2s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+
+
+    </style>
 </head>
 <body>
-<script src="main.js">
-</script>
+
+<div id="table">
+</div>
+
+<script src="main.js"></script>
 </body>
 </html>
